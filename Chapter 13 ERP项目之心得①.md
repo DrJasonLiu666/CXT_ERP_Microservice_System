@@ -189,8 +189,11 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
 ### 4.4.1 代码
 
 ​     <a-col :span="5">
+
 ​       <a-input v-model="queryParam.zmaktxZh"/>
+
 ​       <j-input v-model="queryParam.zmaktxZh"/>
+
 ​      </a-col>
 
 ### 4.4.2 区别
