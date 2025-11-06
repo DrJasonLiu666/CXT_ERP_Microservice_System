@@ -233,10 +233,15 @@ Redis是现在最受欢迎的NoSQL（非关系型）数据库之一，是一种k
      S7：删除残留服务（也可更改服务名，不影响重新安装对应服务，但明显不合理）：打开CMD执行sc delete MySQL  # 这里的MySQL是你要删除的服务名。
 
 2）重装mysql-8.0.32-winx64时注意：
+    
     ①Windows管理工具——服务中没有MySQL实例；
+    
     ②需将原MYSQL安装目录删除后改名（本人是从sql改为MysqlReinstall）；
+    
     ③因此系统变量MYSQL_HOME也需要重新指定值；
+    
     ④my.init也需要重新配置basedir和datadir的参数；
+    
     ⑤同时要保证执行 【mysqld --initialize --console】前， \bin\data是空目录）
 
 ### 4.1.3 mysql-8.0.32-winx64卸载教程
