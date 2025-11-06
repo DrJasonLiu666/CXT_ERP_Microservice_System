@@ -188,13 +188,14 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
 
 ### 4.4.1 代码
 
-​     <a-col :span="5">
+```
+ <a-col :span="5">
+       <a-input v-model="queryParam.zmaktxZh"/>
+       <j-input v-model="queryParam.zmaktxZh"/>
+      </a-col>
+```
 
-​       <a-input v-model="queryParam.zmaktxZh"/>
 
-​       <j-input v-model="queryParam.zmaktxZh"/>
-
-​      </a-col>
 
 ### 4.4.2 区别
 
@@ -346,6 +347,7 @@ v-model双向绑定；value初始值。
  slot   slot-scope
  
  插槽类   插槽实例的值与行号。
+
 
 ### 4.7.2 对table表单下columns中的slot进行数据绑定：插槽中输入的值实时传给全局变量this.dataSource
 
