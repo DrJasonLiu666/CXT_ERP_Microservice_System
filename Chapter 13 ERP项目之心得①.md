@@ -239,14 +239,23 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
 1）添加每行的选择框，以及行管理相关的函数与变量；
 
  （1）<a-table>中的rowSelection属性添加每行的选择框
+ 
  :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
+ 
  （2）该页面全局变量声明
+ 
  selectedRowKeys: [],
+ 
  selectedRows: [],
+ 
  （3）添加行管理函数onChange
+ 
  onSelectChange(selectedRowKeys, selectionRows) {
+ 
          this.selectedRowKeys = selectedRowKeys;
+         
          this.selectionRows = selectionRows;
+         
  },
  
  2）添加删除按钮；
@@ -384,13 +393,21 @@ v-model双向绑定；value初始值。
  //⑤定义弹窗触发事件dlgMatnrClick（使用this.$refs.弹窗名 的方法跳转弹窗）
  
  dlgMatnrClick(data) {
+ 
          console.log(data);
+         
          debugger
+         
          this.searchMatnr = data.vid;
+         
          this.$refs.dlgMatnr.loadPage({
+         
          });
+         
  // 跳转至弹窗
+ 
  // this.$refs.dlgMatnr.loadPage({  “参数”  });
+ 
  },
 
 ###   4.8.2 弹窗到父页面（2步）：
@@ -398,25 +415,42 @@ v-model双向绑定；value初始值。
 //①定义跳回父页面的位置，如 ok，close，或者点x；
 
  <a-modal
+ 
    :title="title"
+   
    :width="800"
+   
    :visible="visible"
+   
    :initdata="initdata"
+   
    @ok="handleOk"
+   
    @cancel="close"
+   
   \>
+  
  </a-modal>
  
  //②定义跳回触发事件，使用跳回方法$emit，从而触发父页面的回调方法
- 
+
+
  handleOk () {
+ 
      this.backdata = this.selectionRows[0];
+     
      this.$emit('callback', this.backdata);
+     
      this.close();
+     
     },
+    
     close () {
+    
      this.$emit('close');
+     
      this.visible = false;
+     
     },
     
  //③父页面中定义回调方法，使用弹窗的传值
@@ -476,16 +510,27 @@ Script ——> export default  ——> methods ——> init()
 ### 4.12.1 <a-table>标签的常见属性
 
   <a-table
+  
       ref="table"
+      
       size="middle"
+      
       bordered
+      
       rowKey="id"
+      
       :columns="tabelOneColumns"
+      
       :dataSource="tableOneAreaValue"
+      
       :pagination="ipagination"
+      
       :loading="loading"
+      
       :scroll="{y: 460 }"
+      
    \>
+   
    </a-table>
    
  1）rowKey属性：行标志。每行的独有标志，一般运用randomUUID()定义，用于区分各行；
@@ -505,24 +550,43 @@ Script ——> export default  ——> methods ——> init()
    【注意：用current获取页码】
    
  loadData(current){
+ 
       this.loading = true;
+      
       if(current){
+      
        this.ipagination.current = current;
+       
       }
+      
       debugger
+      
       this.searchAreaParameter.pageNo = this.ipagination.current;
+      
       this.searchAreaParameter.pageSize = this.ipagination.pageSize;
+      
       getAction(this.url.search, this.searchAreaParameter).then(res => {
+      
        console.log("搜索结果：", res);
+       
        if(res.success){
+       
         this.tableOneAreaValue = res.result.records;
+        
         this.ipagination.total = res.result.total || 0;
+        
         this.loading = false;
+        
        }else{
+       
         this.$message.error(res.message);
+        
         this.loading = false;
+        
        }
+       
       })
+      
      },
      
  5）:loading属性：【待明了】；
@@ -575,40 +639,71 @@ https://cloud.tencent.com/developer/section/1489869
 <a-radio-group></a-radio-group>
 
  <a-radio-group v-model="result.second.cronEvery">
+  
        <a-row>
+       
         <a-radio value="1">每一秒钟</a-radio>
+        
        </a-row>
+       
        <a-row>
+       
         <a-radio value="2">每隔
+        
          <a-input-number size="small" v-model="result.second.incrementIncrement" :min="1" :max="59"></a-input-number>
+         
          秒执行 从
+         
          <a-input-number size="small" v-model="result.second.incrementStart" :min="0" :max="59"></a-input-number>
+         
          秒开始
+         
         </a-radio>
+        
        </a-row>
+       
        <a-row>
+       
         <a-radio value="3">具体秒数(可多选)</a-radio>
+        
         <a-select style="width:354px;" size="small" mode="multiple" v-model="result.second.specificSpecific">
+        
          <a-select-option v-for="(val,index) in 60" :key="index" :value="index">{{ index }}</a-select-option>
+         
         </a-select>
+        
        </a-row>
+       
        <a-row>
+       
         <a-radio value="4">周期从
+        
          <a-input-number size="small" v-model="result.second.rangeStart" :min="1" :max="59"></a-input-number>
+         
          到
+         
          <a-input-number size="small" v-model="result.second.rangeEnd" :min="0" :max="59"></a-input-number>
+         
          秒
+         
         </a-radio>
+        
        </a-row>
+       
       </a-radio-group>
 
 ### 4.16.2 多选框
 
 <a-checkgroup></a-radio-group>
+
          <a-checkbox-group v-model="flowInfo.nextUserList">
+         
           <template v-for="(user, ind) in nextUserInfo">
+          
            <a-checkbox :value="user.username">{{user.realname}}</a-checkbox>
+           
           </template>
+          
          </a-checkbox-group>
 
 # 5 Java学习
@@ -654,13 +749,17 @@ https://blog.csdn.net/m0_37761437/article/details/1104689441
 ### 5.4.1 方法一：在mapper.xml中用REGEXP_LIKE方法
 
   <select id="getByName" resultType="org.jeecg.modules.erp.entity.ErpHVendor">
+   
      select * from ERP_H_VENDOR where REGEXP_LIKE(zname,#{name}, 'i')
+     
    </select>
 
 ### 5.4.2 方法二：queryWrapper中使用UPPER()和toUpperCase()
 
 if(StringUtils.isNotBlank(para.getZmaktxEn())) {
+
       queryWrapper.like("UPPER(ZMAKTX_EN)", para.getZmaktxEn().toUpperCase());
+      
  };
 
 ## 5.5 entity间传值（从header到matnrPartsVo，对应关系：相同的property之间）
