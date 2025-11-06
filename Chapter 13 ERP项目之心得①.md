@@ -206,11 +206,11 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
 ### 4.5.1 添加行
 
 1）添加功能按钮；
-
+```
  <a-button class="level2Button" @click="addRow" size="small" type="primary" icon="plus">{{$t('btn.add')}}</a-button>
- 
+```
  2）添加功能按钮触发函数；
- 
+``` 
        addRow() {
          let nitem = {
            vid: randomUUID(),
@@ -223,11 +223,11 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
          };
          this.dataSource.push(nitem);
        },
-       
+```       
  3）引用randomUUID包；
- 
+```
  import {randomUUID } from '@/utils/util'
- 
+```
  4）给每列添加相应的slot；
  
  <a-table>与</a-table>间添加插槽实现方法，实现方法不要用v-model；
