@@ -518,9 +518,7 @@ apache是web服务器，tomcat是应用（java）服务器，它只是一个serv
 
 【集中式服务器，独立式服务器】
 
-详见链接：
-
-[(23条消息) B/S架构及其运行原理_蜘蛛侠不会飞的博客-CSDN博客_b/s](https://blog.csdn.net/qq_40587575/article/details/79673478)
+详见链接：[(23条消息) B/S架构及其运行原理_蜘蛛侠不会飞的博客-CSDN博客_b/s](https://blog.csdn.net/qq_40587575/article/details/79673478)
 
 ## 11.3 服务器连接工具
 
@@ -538,7 +536,7 @@ putty 输入命令行的。
 
 winscp主要是删除，上传文件的时候有个图形界面，方便。
  
-【1出自：原文链接：[(25条消息) putty 与winscp 区别_lxw1844912514的博客-CSDN博客](https://blog.csdn.net/lxw1844912514/article/details/100027170)】
+出自：原文链接：[(25条消息) putty 与winscp 区别_lxw1844912514的博客-CSDN博客](https://blog.csdn.net/lxw1844912514/article/details/100027170)
 
 
 
@@ -548,7 +546,7 @@ FileZilla是ftp用的，WinSCP是连接Windows和Linux的，VNC是Windows以图�
 
 Filezilla分为client和server。其中FileZilla Server是Windows平台下一个小巧的第三方FTP[服务器](https://cloud.tencent.com/product/cvm?from=10680)软件，系统资源也占用非常小，可以让你快速简单的建立自己的FTP服务器
 
-【2出自：原文链接：[FileZilla，WinSCP，VNC，putty，mstsc区别 - 腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1352397#:~:text=FileZilla，WinSCP，VNC，putty，mstsc区别 发布于2018-10-09 19%3A05%3A02 阅读 1.5K,0 FileZilla是ftp用的，WinSCP是连接Windows和Linux的，VNC是Windows以图形界面访问Linux或者mac的，putty是Windows连接Linux命令行的，mstsc（Microsoft Terminal Service Client）是Windows连接Windows的远程桌面。)】
+出自：[FileZilla，WinSCP，VNC，putty，mstsc区别 - 腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1352397#:~:text=FileZilla，WinSCP，VNC，putty，mstsc区别 发布于2018-10-09 19%3A05%3A02 阅读 1.5K,0 FileZilla是ftp用的，WinSCP是连接Windows和Linux的，VNC是Windows以图形界面访问Linux或者mac的，putty是Windows连接Linux命令行的，mstsc（Microsoft Terminal Service Client）是Windows连接Windows的远程桌面。)
 
 
 
