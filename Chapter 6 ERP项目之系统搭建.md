@@ -28,7 +28,7 @@
 
 ### 3.2.1 教程
 
-[【Jenkins】Linux搭建Jenkins平台 - KK_Yolanda - 博客园 (cnblogs.com)](https://www.cnblogs.com/zhaoxd07/p/4956637.html#:~:text=② 下载一个tomcat容器在webapps中放入jenkins.war%2C不要解压。 ③ 在cd %2Fopt%2Fsoft%2Ftomcat%2Fwebapps%2F,中执行 java -jar jenkins.war ④ 查看日志是否有异常，访问http%3A%2F%2Fip%3A8080即可看到jenkins界面，jenkins安装成功。)
+[https://www.cnblogs.com/zhaoxd07/p/4956637.html#:~:text=%E2%91%A1%20%E4%B8%8B%E8%BD%BD%E4%B8%80%E4%B8%AAtomcat%E5%AE%B9%E5%99%A8%E5%9C%A8webapps%E4%B8%AD%E6%94%BE%E5%85%A5jenkins.war%2C%E4%B8%8D%E8%A6%81%E8%A7%A3%E5%8E%8B%E3%80%82%20%E2%91%A2%20%E5%9C%A8cd%20%2Fopt%2Fsoft%2Ftomcat%2Fwebapps%2F,%E4%B8%AD%E6%89%A7%E8%A1%8C%20java%20-jar%20jenkins.war%20%E2%91%A3%20%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97%E6%98%AF%E5%90%A6%E6%9C%89%E5%BC%82%E5%B8%B8%EF%BC%8C%E8%AE%BF%E9%97%AEhttp%3A%2F%2Fip%3A8080%E5%8D%B3%E5%8F%AF%E7%9C%8B%E5%88%B0jenkins%E7%95%8C%E9%9D%A2%EF%BC%8Cjenkins%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E3%80%82](https://www.cnblogs.com/zhaoxd07/p/4956637.html#:~:text=%E2%91%A1%20%E4%B8%8B%E8%BD%BD%E4%B8%80%E4%B8%AAtomcat%E5%AE%B9%E5%99%A8%E5%9C%A8webapps%E4%B8%AD%E6%94%BE%E5%85%A5jenkins.war%2C%E4%B8%8D%E8%A6%81%E8%A7%A3%E5%8E%8B%E3%80%82%20%E2%91%A2%20%E5%9C%A8cd%20%2Fopt%2Fsoft%2Ftomcat%2Fwebapps%2F,%E4%B8%AD%E6%89%A7%E8%A1%8C%20java%20-jar%20jenkins.war%20%E2%91%A3%20%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97%E6%98%AF%E5%90%A6%E6%9C%89%E5%BC%82%E5%B8%B8%EF%BC%8C%E8%AE%BF%E9%97%AEhttp%3A%2F%2Fip%3A8080%E5%8D%B3%E5%8F%AF%E7%9C%8B%E5%88%B0jenkins%E7%95%8C%E9%9D%A2%EF%BC%8Cjenkins%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E3%80%82)
 
 ### 3.2.2 一键发版（Pipeline的使用）
 
