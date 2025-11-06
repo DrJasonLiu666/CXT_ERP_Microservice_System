@@ -95,36 +95,35 @@ DBeaver使用教程：[图文并茂教你使用dbeaver连接oracle数据库，�
      S2：Mysql安装目录下的bin文件中创建my.ini和data文件（my.ini配置文件中的 basedir和datadir修改成自己的安装地址）；
      
      S3：设置环境变量MYSQL_HOME，并编辑PATH变量；
-
- ​    S4：在cmd中操作（启动mysql并修改密码和权限）【在cmd中操作MYSQL时注意执行语句是否以 英文分号 ; 结尾】
-​          
-           注意：在桌面中启动cmd并进入mysql的bin目录下。
-​                 
-                    后续在cmd的mysql_bin目录下执行命令的顺序为：
-
-​                                    mysqld --install    #安装MYSQL
-​                                     
-​                                    mysqld --initialize --console;  # 获取root的初始密码
-​                                     
-​                                    net start mysql    # 启动MYSQL
-​                                     
-​                                    mysql -u root -p    # 用root账号登录，会提示你输入密码
-​                                     
-​                                    \# 修改密码，其中 klvchen 为密码
-​                                     
-​                                    ALTER USER 'root'@'localhost' IDENTIFIED BY 'klvchen';
-
-​                                    use mysql;
-​                                     
-​                                    update user set host = '%' where user = 'root';
-​                                     
-​                                    flush privileges;
-​                                     
-​                                    ALTER USER 'root'@'%' PASSWORD EXPIRE NEVER;
-​                                     
-​                                    flush privileges;
-​     
-​     S5：最后，在cmd中测试连接数据库。
+     
+     S4：在cmd中操作（启动mysql并修改密码和权限）【在cmd中操作MYSQL时注意执行语句是否以 英文分号 ; 结尾】
+     
+            注意：在桌面中启动cmd并进入mysql的bin目录下。
+                       
+                       后续在cmd的mysql_bin目录下执行命令的顺序为：
+                                    mysqld --install    #安装MYSQL
+                                    
+                                    mysqld --initialize --console;  # 获取root的初始密码
+                                    
+                                    net start mysql    # 启动MYSQL
+                                    
+                                    mysql -u root -p    # 用root账号登录，会提示你输入密码
+                                    
+                                    \# 修改密码，其中 klvchen 为密码
+                                    
+                                    ALTER USER 'root'@'localhost' IDENTIFIED BY 'klvchen';
+                                    
+                                    use mysql;
+                                    
+                                    update user set host = '%' where user = 'root';
+                                    
+                                    flush privileges;
+                                    
+                                    ALTER USER 'root'@'%' PASSWORD EXPIRE NEVER;
+                                    
+                                    flush privileges;
+                                    
+     S5：最后，在cmd中测试连接数据库。
 
 ②在cmd中执行sql文件创建数据库的教程（在cmd中操作MYSQL时注意执行语句是否以 英文分号 ; 结尾）：
  [mysql数据库用source命令导入.sql文件，执行SQL语句_mysql source 带sql参数_dmfrm的博客-CSDN博客](https://blog.csdn.net/u010889616/article/details/48226719)
@@ -133,9 +132,7 @@ DBeaver使用教程：[图文并茂教你使用dbeaver连接oracle数据库，�
 
 \# 首先在cmd中进入mysql安装目录下的bin文件（本机为： D:\0projects\SQL\mysql-8.0.32-winx64\bin）
 
- d:
- 
- cd D:\0projects\SQL\mysql-8.0.32-winx64\bin
+ d:cd D:\0projects\SQL\mysql-8.0.32-winx64\bin
  
  \# 启动mysql
  
@@ -163,9 +160,7 @@ DBeaver使用教程：[图文并茂教你使用dbeaver连接oracle数据库，�
  
  \# 首先cmd中进入mysql安装目录下的bin文件（本机为： D:\0projects\SQL\mysql-8.0.32-winx64\bin）
  
- d:
- 
- cd D:\0projects\SQL\mysql-8.0.32-winx64\bin
+ d:cd D:\0projects\SQL\mysql-8.0.32-winx64\bin
  
  \# 启动mysql
  
@@ -195,15 +190,15 @@ DBeaver使用教程：[图文并茂教你使用dbeaver连接oracle数据库，�
 
 使用cmd安装：[Windows下安装Redis图文教程_redis windows_喵代王-香菜的博客-CSDN博客](https://blog.csdn.net/chen15369337607/article/details/119334531)
 
- 图形化方式安装：[最新版Redis安装配置教程（Windows+Linux）_redis安装教程_Baret-H的博客-CSDN博客](https://blog.csdn.net/qq_45173404/article/details/107715530)
+图形化方式安装：[最新版Redis安装配置教程（Windows+Linux）_redis安装教程_Baret-H的博客-CSDN博客](https://blog.csdn.net/qq_45173404/article/details/107715530)
  
- 下载地址：[Releases · tporadowski/redis · GitHub](https://github.com/tporadowski/redis/releases)
+下载地址：[Releases · tporadowski/redis · GitHub](https://github.com/tporadowski/redis/releases)
 
 ### 3.3.2 redis是什么
 
 Redis是现在最受欢迎的NoSQL（非关系型）数据库之一，是一种key-value存储系统。详见：[Redis是什么？看这一篇就够了 - 葡萄城技术团队 - 博客园](https://www.cnblogs.com/powertoolsteam/p/redis.html)
 
- 【sql是关系型，redis与sql互补】
+【sql是关系型，redis与sql互补】
 
 # 4 jeecgboot工程启动SOP
 
@@ -238,16 +233,11 @@ Redis是现在最受欢迎的NoSQL（非关系型）数据库之一，是一种k
      S7：删除残留服务（也可更改服务名，不影响重新安装对应服务，但明显不合理）：打开CMD执行sc delete MySQL  # 这里的MySQL是你要删除的服务名。
 
 2）重装mysql-8.0.32-winx64时注意：
-
-​    ①Windows管理工具——服务中没有MySQL实例；
-
-​     ②需将原MYSQL安装目录删除后改名（本人是从sql改为MysqlReinstall）；
-
-​     ③因此系统变量MYSQL_HOME也需要重新指定值；
-
-​     ④my.init也需要重新配置basedir和datadir的参数；
-
-​     ⑤同时要保证执行 【mysqld --initialize --console】前， \bin\data是空目录）
+    ①Windows管理工具——服务中没有MySQL实例；
+    ②需将原MYSQL安装目录删除后改名（本人是从sql改为MysqlReinstall）；
+    ③因此系统变量MYSQL_HOME也需要重新指定值；
+    ④my.init也需要重新配置basedir和datadir的参数；
+    ⑤同时要保证执行 【mysqld --initialize --console】前， \bin\data是空目录）
 
 ### 4.1.3 mysql-8.0.32-winx64卸载教程
 
@@ -261,6 +251,6 @@ Redis是现在最受欢迎的NoSQL（非关系型）数据库之一，是一种k
 
 1 问题：内网中，其他设备输入内网前端登录地址，可以进入登录界面但显示没有连上后端；使用公网地址登录时，一直是加载界面。（已有解决方案详见  微信—文件传输助手）
 
- 2 公网地址：https://706d3q4079.yicp.fun
+2 公网地址：https://706d3q4079.yicp.fun
 
 ## 4.4 登录系统；
