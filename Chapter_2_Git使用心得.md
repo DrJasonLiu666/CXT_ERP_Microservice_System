@@ -19,19 +19,29 @@
 ### 4.2.2 方法二：在IDEA中操作
 
 ①教程：[41-工具类_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15W4y1479P/?spm_id_from=pageDriver&vd_source=b09849ba0c96cf27a23de3e43fd5066d)
- ②步骤：
+
+②步骤：
+
      S1：idea的Git对话框中 remove remote；
+     
      S2：点击 idea右上角 斜向右上箭头：添加remote，并push；
+     
      S3：gitlab中出现New merge request，点进去后生成 Merge Request；
+     
      S4：同意Merge；
 
 ### 4.2.3 方法三：使用TortoiseGit
 
 ①教程：[【Git教程】5-7 Git推送已有仓库到Gitee_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15i4y1Z7jf/?spm_id_from=333.880.my_history.page.click&vd_source=b09849ba0c96cf27a23de3e43fd5066d)
- ②步骤：
+
+②步骤：
+
      S1：TortoiseGit——setting——Git——remote中，删除原有remote，添加新的remote，不用修改origin名称；
+     
      S2：TortoiseGit——push；
+     
      S3：gitlab中出现New merge request，点进去后生成 Merge Request；
+     
      S4：解决冲突，并同意Merge；
 
 ## 4.3 遇见的问题
@@ -62,12 +72,14 @@
 
 ## 5.2 个人理解
 
+```
 Git（Git管理最全面的工具）：  Git Bash here（Git的命令行界面，可以实现Git的全部操作）
                           Git GUI here（Git图形化工具，只实现部分git命令的GUI化）
                           Git Clone（Git Clone相关指令的命令栏化）
                           Git commit（Git commit相关指令的命令栏化）
                           Git syn（Git syn相关指令的命令栏化）
  TortoiseGit（基本上Git所有功能的命令栏化）
+```
 
 # 6 可参考的Git学习资料
 
