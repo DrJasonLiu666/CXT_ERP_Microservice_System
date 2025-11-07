@@ -18,7 +18,7 @@ https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/releases/download/s
 
 ![img](https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/blob/main/photos/Chapter%209%20ERP%E9%A1%B9%E7%9B%AE%E4%B9%8BActiviti%E5%BC%95%E6%93%8E/1.png)
 
-流程唯一标识：**作为启动流程、获取待办等的key值，必须定义。**
+流程唯一标识： **作为启动流程、获取待办等的key值，必须定义。** 
 
 ## 2.2 参与者配置约定
 
