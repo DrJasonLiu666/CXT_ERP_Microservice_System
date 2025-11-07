@@ -1,5 +1,5 @@
  注：本章资源已上传至CSDN，详见https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/releases/download/package/ERPDBData.zip
-
+#
 
 第一部分：oracle安装教程
 
@@ -9,6 +9,7 @@
  
  https://blog.csdn.net/weivi001/article/details/45342483?locationNum=8
 
+------
 全局数据库名
 
  orcl
@@ -20,6 +21,8 @@
  口令\密码
  
  admin
+ 
+------
 
 数据库管理后台地址
 
@@ -29,12 +32,15 @@
  
  admin
 
+------
+
 自带用户
 
  scott
  
  tiger
 
+#
 
  第二部分：PL/SQL Developer安装教程
  
@@ -42,14 +48,12 @@
  
  下载官网地址：https://www.allroundautomations.com/registered-plsqldev/
 
-
+#
 
 第三部分：DBeaver连接Oracle
  
- 教程：https://jingyan.baidu.com/article/aa6a2c14aeadf20d4c19c4e9.html
- 
- /*
- 
+教程：https://jingyan.baidu.com/article/aa6a2c14aeadf20d4c19c4e9.html
+ ``` 
  错误：
  
  Can’t create driver instance
@@ -79,10 +83,9 @@ Reason: can’t load driver class ‘oracle.jdbc.OracleDriver’
 解决教程
 
  https://www.cnblogs.com/wwssgg/p/16532326.html
- 
- */
+```
 
-
+#
 
 第四部分：DBeaver运行sql脚本创建
 
@@ -93,7 +96,7 @@ Reason: can’t load driver class ‘oracle.jdbc.OracleDriver’
 4.1 创建表空间（ERP_TBS）和创建用户（CXTERP）
 
  sqlPlus命令行输入语句：
- 
+ ```
  // 创建表空间
  
  SQL> create  tablespace  ERP_TBS  datafile  'D:\0projects\waigua\DB\ERP_TBS.DBF' size  3000m;
@@ -107,19 +110,19 @@ Reason: can’t load driver class ‘oracle.jdbc.OracleDriver’
  //分配用户权限
  
  grant connect,resource,dba to CXTERP;
- 
+ ```
  教程
  
  https://blog.csdn.net/tianynnb/article/details/124360616
  
  https://jingyan.baidu.com/article/a378c960d3a611b3282830ed.html
-
+```
 DROP TABLESPACE CXTERP INCLUDING CONTENTS AND DATAFILES;
 
  DROP TABLESPACE CXTERP INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
-
+```
 【执行后报  SQL 错误 [942] [42000]: ORA-00942: 表或视图不存在】
-
+```
  【对应报错的sql语句
  
  CREATE UNIQUE INDEX "CXTERP"."SYS_C0026166" ON "CXTERP"."ACT_RU_IDENTITYLINK" ("ID_") 
@@ -181,3 +184,4 @@ DROP TABLESPACE CXTERP INCLUDING CONTENTS AND DATAFILES;
   BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   
   TABLESPACE "ERP_TBS" ;】
+```
