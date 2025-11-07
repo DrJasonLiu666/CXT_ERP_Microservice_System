@@ -8,9 +8,8 @@ node是前端中JS运行环境，提供了包管理器npm
 
 Node.js是一个JavaScript的编译环境，当前端语言JavaScript在写完之后可以交给Node.js进行编译和解释，它的存在对于JavaScript有了质的飞跃
 
-可参考：
+可参考：https://zhuanlan.zhihu.com/p/372855120#:~:text=Node.js%E9%80%9A%E5%B8%B8%E8%A2%AB%E7%94%A8%E6%9D%A5%E5%BC%80%E5%8F%91%E4%BD%8E%E5%BB%B6%E8%BF%9F%E7%9A%84%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E9%82%A3%E4%BA%9B%E9%9C%80%E8%A6%81%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E7%8E%AF%E5%A2%83%E5%92%8C%E5%89%8D%E7%AB%AF%E5%AE%9E%E6%97%B6%E6%94%B6%E9%9B%86%E5%92%8C%E4%BA%A4%E6%8D%A2%E6%95%B0%E6%8D%AE%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%88API%E3%80%81%E5%8D%B3%E6%97%B6%E8%81%8A%E5%A4%A9%E3%80%81%E5%BE%AE%E6%9C%8D%E5%8A%A1%EF%BC%89%E3%80%82%20%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E3%80%81%E8%85%BE%E8%AE%AF%E3%80%81Qunar%E3%80%81%E7%99%BE%E5%BA%A6%E3%80%81PayPal%E3%80%81%E9%81%93%E7%90%BC%E6%96%AF%E3%80%81%E6%B2%83%E5%B0%94%E7%8E%9B%E5%92%8C%20LinkedIn,%E9%83%BD%E9%87%87%E7%94%A8%E4%BA%86%20Node.js%20%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%BA%94%E7%94%A8%E3%80%82
 
-[前端学nodejs有什么用处？ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/372855120#:~:text=Node.js通常被用来开发低延迟的网络应用，也就是那些需要在服务器端环境和前端实时收集和交换数据的应用（API、即时聊天、微服务）。 阿里巴巴、腾讯、Qunar、百度、PayPal、道琼斯、沃尔玛和 LinkedIn,都采用了 Node.js 框架搭建应用。)
 
 # 3 前后端间传值：VO、Entity、JSon
 
@@ -233,23 +232,24 @@ export default {
 
  【前端】【MatnrModule.vue文件】
 
+##
 【后端】
 
  1、VO类【SearchHelpVO.java】
  
  【前后端传输的数据内容】
-
+##
 2、entity类【entity.ErpHMatnr.java文件】
 
  【指明TableName】
  
  【后端对数据库某表需要查询的字段，即后端与数据库数据交换的格式内容】
 
-
+##
  3、Controller层【SearchMenuHelpController.java文件】
  
  【调用mybatisplus中的queryWrapper进行entity类封装操作，从而实现对数据库查询】
-
+##
 4、IPage、Page实现分页传输
 
 # 4 vue中插槽Slot功能的使用
