@@ -18,11 +18,9 @@ Ant-design-vue官网：[Ant Design of Vue - Ant Design Vue (antdv.com)](https://
 
 ### 2.1.1 前端URL使用
 
-```
-①配置文件中指明后端路径（后端服务器IP+端口+context path）
-②indax.js中配置缩写
-③vue文件中定义URL并使用
-```
+- ①配置文件中指明后端路径（后端服务器IP+端口+context path）
+- ②indax.js中配置缩写
+- ③vue文件中定义URL并使用
 
 ### 2.1.2 前端添加@click=downloadTemplate函数
 
@@ -93,6 +91,7 @@ Ant-design-vue官网：[Ant Design of Vue - Ant Design Vue (antdv.com)](https://
 ### 4.1.2 返回报文
 
 ①后端返回给前端的是info名称的object，info结构：info{ file:{..., response, ... }, fileList: Array(1) }。
+
 ②info.file.status分为 uploading、 done、error三种：
 
     uploading意味着上传中，后端传回的Info报文中并没有info.file.response;
