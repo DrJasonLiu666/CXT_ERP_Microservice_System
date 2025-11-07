@@ -338,7 +338,7 @@ try{
 
 ①Maven用户直接连接远程仓库下载构件的做法是Maven不建议使用的（尤其是对一个开发团队来说），Maven的最佳实践就是使用Maven私服来构建整个团队的项目部署和管理。
 
-②当我们在 pom 文件中依赖了某个包后，如果在没有做特殊配置（也就是使用 maven 的默认配置）的情况下，Maven 会首先到本地仓库去搜索，如果本地仓库没有此依赖包，会到中央仓库获取，默认的中央仓库地址是 http://repo1.maven.org/maven2，服务器在国外，可想而知，速度是没办法保证的。有时候运气不好，晚上拉下来一个开源项目，执行 Maven 包安装，早上睡醒了一看，还没下载完，你说来气不。
+②当我们在 pom 文件中依赖了某个包后，如果在没有做特殊配置（也就是使用 maven 的默认配置）的情况下，Maven 会首先到本地仓库去搜索，如果本地仓库没有此依赖包，会到中央仓库获取，默认的中央仓库地址是 `http://repo1.maven.org/maven2` ,服务器在国外，可想而知，速度是没办法保证的。有时候运气不好，晚上拉下来一个开源项目，执行 Maven 包安装，早上睡醒了一看，还没下载完，你说来气不。
 
 ## 4.2 搭建Maven私服Nexus
 
@@ -546,8 +546,7 @@ FileZilla是ftp用的，WinSCP是连接Windows和Linux的，VNC是Windows以图�
 
 Filezilla分为client和server。其中FileZilla Server是Windows平台下一个小巧的第三方FTP[服务器](https://cloud.tencent.com/product/cvm?from=10680)软件，系统资源也占用非常小，可以让你快速简单的建立自己的FTP服务器
 
-出自：[FileZilla，WinSCP，VNC，putty，mstsc区别 - 腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1352397#:~:text=FileZilla，WinSCP，VNC，putty，mstsc区别 发布于2018-10-09 19%3A05%3A02 阅读 1.5K,0 FileZilla是ftp用的，WinSCP是连接Windows和Linux的，VNC是Windows以图形界面访问Linux或者mac的，putty是Windows连接Linux命令行的，mstsc（Microsoft Terminal Service Client）是Windows连接Windows的远程桌面。)
-
+出自：https://cloud.tencent.com/developer/article/1352397
 
 
 **3、\**\*\*\*\*\*\*\*\*\*\*\*\*[使用WinScp连接远程服务器和传输文件](https://www.cnblogs.com/fuyaozhishang/p/8033849.html)\*\*\*\*\*\*\*\*\*\*\*\*\****
@@ -584,8 +583,6 @@ Filezilla分为client和server。其中FileZilla Server是Windows平台下一个
 
 [一篇文章，全面掌握Java自定义注解（Annontation） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/60730622)
 
-[Java注解 - Java教程 (yiibai.com)](https://www.yiibai.com/java/java-annotation-tutorial.html#:~:text=Java注解 1 1. 什么是注解 Java注解用于为Java代码提供元数据。 作为元数据，注解不直接影响你的代码执行，但也有一些类型的注解实际上可以用于这一目的。 Java注解通常用于以下目的： 编译器指令,没有函数体； 没有函数参数； 返回的声明必须在一个特定的类型： 基本类型 (boolean%2C int%2C float%2C…) )
-
 [(54条消息) java中为什么要用注解_java中的注解，真的很重要，你理解了嘛？_weixin_39779537的博客-CSDN博客](https://blog.csdn.net/weixin_39779537/article/details/114134990)
 
 ## 11.7 ERP项目的启动
@@ -594,10 +591,12 @@ Filezilla分为client和server。其中FileZilla Server是Windows平台下一个
 
 配置（文件）、依赖（pom.xml、Maven、Dependency等等）、环境（本地开发环境、测试环境、生产环境等等）、服务器
 
+------
 Nexus（Maven私服搭建）教程：http://c.biancheng.net/nexus/
 
 Sonatype Nexus Repository Manager
 
+------
 业务系统
 
 权限管理系统
