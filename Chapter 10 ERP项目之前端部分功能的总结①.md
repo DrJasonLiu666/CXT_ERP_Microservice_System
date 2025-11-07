@@ -98,30 +98,30 @@
 
 ## 6.1 插槽功能
 
-## 6.1.1 横向条某行中某一栏的单栏弹窗式插槽功能示例（无图标）_MMS
+### 6.1.1 横向条某行中某一栏的单栏弹窗式插槽功能示例（无图标）_MMS
 
 ![img](https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/blob/main/photos/Chapter%2010%20ERP%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%89%8D%E7%AB%AF%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E7%9A%84%E6%80%BB%E7%BB%93%E2%91%A0/2.png)
 
 
-## 6.1.2 横向条某行中某一栏的单栏弹窗式插槽功能示例（有图标）_WMS
+### 6.1.2 横向条某行中某一栏的单栏弹窗式插槽功能示例（有图标）_WMS
 
 ![img](https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/blob/main/photos/Chapter%2010%20ERP%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%89%8D%E7%AB%AF%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E7%9A%84%E6%80%BB%E7%BB%93%E2%91%A0/3.png)
 
 
 
-## 6.1.3 横向条某行中某一栏的数控式填充框插槽功能示例_WMS
+### 6.1.3 横向条某行中某一栏的数控式填充框插槽功能示例_WMS
 
 ![img](https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/blob/main/photos/Chapter%2010%20ERP%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%89%8D%E7%AB%AF%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E7%9A%84%E6%80%BB%E7%BB%93%E2%91%A0/4.png)
 
 
 
-## 6.1.4 横向条某行中某一栏的无数控纯填充框插槽功能示例_WMS
+### 6.1.4 横向条某行中某一栏的无数控纯填充框插槽功能示例_WMS
 
 ![img](https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/blob/main/photos/Chapter%2010%20ERP%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%89%8D%E7%AB%AF%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E7%9A%84%E6%80%BB%E7%BB%93%E2%91%A0/5.png)
 
 
 
-## 6.1.5 横向条某行中某一栏的下拉框插槽功能示例_MMS
+### 6.1.5 横向条某行中某一栏的下拉框插槽功能示例_MMS
 
 ![img](https://github.com/DrJasonLiu666/CXT_ERP_Microservice_System/blob/main/photos/Chapter%2010%20ERP%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%89%8D%E7%AB%AF%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E7%9A%84%E6%80%BB%E7%BB%93%E2%91%A0/6.png)
 
