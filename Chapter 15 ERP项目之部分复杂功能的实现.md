@@ -19,15 +19,16 @@ Ant-design-vue官网：[Ant Design of Vue - Ant Design Vue (antdv.com)](https://
 ### 2.1.1 前端URL使用
 
 ```
-  ①配置文件中指明后端路径（后端服务器IP+端口+context path）
-   ②indax.js中配置缩写
-   ③vue文件中定义URL并使用
+①配置文件中指明后端路径（后端服务器IP+端口+context path）
+②indax.js中配置缩写
+③vue文件中定义URL并使用
 ```
 
 ### 2.1.2 前端添加@click=downloadTemplate函数
 
 两个参数：文件名；token（token在vue文件的export default的created中定义）；
- 该函数里面使用window.open函数创建新页面下载；
+
+该函数里面使用window.open函数创建新页面下载；
 
 ### 2.1.3 后端使用公共组件
 
@@ -43,7 +44,7 @@ Ant-design-vue官网：[Ant Design of Vue - Ant Design Vue (antdv.com)](https://
 
 ## 3.1 前端<a-upload>
 
-### 3.1.1 <a-upload>使用
+### 3.1.1 `<a-upload>` 使用
 
 ```
 <a-upload>自动生成导入弹窗，并在<a-upload>与</a-upload>之间形成上传功能实现区域（功能区、显示区）
@@ -52,20 +53,18 @@ Ant-design-vue官网：[Ant Design of Vue - Ant Design Vue (antdv.com)](https://
  </a-upload>
 ```
 
-### 3.1.2 <a-upload>中的各个参数
+### 3.1.2 `<a-upload>` 中的各个参数
+- ①name：上传种类，如file、picture等；
+- ②action：指向后端服务器URL，常见于读取excel内容并返回给前端；
+- ③multiple：上传时是否可一次上传多个文件；
+- ④accept：可接受的<name>类型；
+- ⑤showUploadList：暂不确定；
+- ⑥data：暂不确定；
+- ⑦beforeUpload：上传前进行的触发事件；
+- ⑧change：对应上传后，action中的URL返回报文；
 
-```
-①name：上传种类，如file、picture等；
- ②action：指向后端服务器URL，常见于读取excel内容并返回给前端；
- ③multiple：上传时是否可一次上传多个文件；
- ④accept：可接受的<name>类型；
- ⑤showUploadList：暂不确定；
- ⑥data：暂不确定；
- ⑦beforeUpload：上传前进行的触发事件；
- ⑧change：对应上传后，action中的URL返回报文；
-```
-```
 【示例】
+```
     <a-upload name="file"
             :action="url.import"
             :multiple="false"
@@ -87,20 +86,20 @@ Ant-design-vue官网：[Ant Design of Vue - Ant Design Vue (antdv.com)](https://
 
 ### 4.1.1 数据处理
 
-```
 ①使用 EXCEL处理工具中的标准类读取 excel中数据：List<String[]> data = ExcelUtil.getInstance().parse(file.getOriginalFilename(), file.getInputStream())。无需自己写程序慢慢读取；
- ②对数据进行校验、处理；
-```
+
+②对数据进行校验、处理；
 
 ### 4.1.2 返回报文
 
-```
 ①后端返回给前端的是info名称的object，info结构：info{ file:{..., response, ... }, fileList: Array(1) }。
- ②info.file.status分为 uploading、 done、error三种：
-   uploading意味着上传中，后端传回的Info报文中并没有info.file.response;
-   done意味着上传完成，架构自动将info.file.response封装到info中，前端可获取到数据；
-   error意味着上传失败。
-```
+②info.file.status分为 uploading、 done、error三种：
+
+    uploading意味着上传中，后端传回的Info报文中并没有info.file.response;
+    
+    done意味着上传完成，架构自动将info.file.response封装到info中，前端可获取到数据；
+    
+    error意味着上传失败。
 
 ## 4.2 前端（:action="url.import"；handleBeforeUpload；handleUploadChange）
 
