@@ -230,7 +230,7 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
 ```
  4）给每列添加相应的slot；
  
- <a-table>与</a-table>间添加插槽实现方法，实现方法不要用v-model；
+ `<a-table>与</a-table>间添加插槽实现方法，实现方法不要用v-model；`
  
  5）添加每行的选择框，以及行管理相关的函数与变量；
  
@@ -253,7 +253,7 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
  selectedRows: [],
  
  （3）添加行管理函数onChange
- 
+``` 
  onSelectChange(selectedRowKeys, selectionRows) {
  
          this.selectedRowKeys = selectedRowKeys;
@@ -261,11 +261,11 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
          this.selectionRows = selectionRows;
          
  },
- 
+ ```
  2）添加删除按钮；
- 
+ ```
  <a-button class="level2Button" @click="deleteRows" size="small" type="danger" icon="delete" :disabled="columns.length!=0">{{$t('btn.delete')}}</a-button>
- 
+ ```
  3）添加 删除触发函数deleteRows；
  
        deleteRows() {
@@ -303,11 +303,11 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
 ②再实现行add添加与delete删除功能。
 
 ### 4.6.1 表格每行插槽slot中的初始值
-
+```
 <template slot="input" slot-scope="text, record">
            <a-input placeholder="请输入内容" :value="text"></a-input>
  </template>
- 
+ ```
  （1）插槽ID：slot="input"；
  
  （2）excel导入的数值传给表格的插槽：slot-scope="text, record"
@@ -323,11 +323,11 @@ https://blog.csdn.net/qq_39347364/article/details/104999151
  ③add添加行，delete删除行；
  
  ④import导入的数据text展示在插槽<a-input>中，实现在页面中再次编辑数据而无需再次导入，即设置初始值value="text"，而不是v-model；
- 
+ ```
  <template slot="input" slot-scope="text, record">
            <a-input placeholder="请输入内容" :value="text"></a-input>
  </template>
-
+```
 v-model双向绑定；value初始值。
 
  ⑤table表格的columns中使用插槽，供编辑。
@@ -335,28 +335,28 @@ v-model双向绑定；value初始值。
 ## 4.7 插槽使用总结
 
 ### 4.7.1 插槽slot的参数
-
+```
 <template slot="input" slot-scope="text, record">
            <a-input placeholder="请输入内容" :value="text"></a-input>
  </template>
-
+```
  （1）slot="input"是指插槽名称；使用了该插槽的table列均可以使用该插槽；
  
  （2）slot-scope="text, record"是指：当table中具体某行的某列插槽使用时，该插槽实例的值text，以及其所在行的值record。
  
- slot   slot-scope
+ slot是指：插槽类
  
- 插槽类   插槽实例的值与行号。
+ slot-scope是指：插槽实例的值与行号。
 
 
 ### 4.7.2 对table表单下columns中的slot进行数据绑定：插槽中输入的值实时传给全局变量this.dataSource
 
 参考教程：MMS系统——src.views.matnr.CleanRepairPartsApply.vue中的slot="slot"插槽
-
+```
  <template :slot="slot" slot-scope="text, record" v-for="slot in editorCells">
        <SelectCell v-bind:key="slot" :text="text" dictCode="COMMON_FLAG" @change="handleChangeCell(record.id||record.vid, slot, $event)" @click="stopPropagation" />
  </template>
-         
+```     
  （1）@change触发事件，只要里面输入的值改变，就会触发事件；
  
  （2）使用 $event参数：该参数实时获取页面数值变化，通常配置@change触发事件使用。
@@ -376,7 +376,7 @@ v-model双向绑定；value初始值。
 ### 4.8.1 父页面到弹窗（五步：2、1、1、1）：  
 
 【定义页面功能键位置，定义ref方法与回调方法；import；components；定义click触发事件】     
-
+```
  //①<template>中声明弹窗，并声明去的方法： ref方法与弹窗名digMatnr。同时声明回来的方法，即回调方法：dlgMatnrOk
  
  <DlgMatnr ref="dlgMatnr" @callback="dlgMatnrOk" />
@@ -414,9 +414,10 @@ v-model双向绑定；value初始值。
  // this.$refs.dlgMatnr.loadPage({  “参数”  });
  
  },
+```
 
 ###   4.8.2 弹窗到父页面（2步）：
-
+```
 //①定义跳回父页面的位置，如 ok，close，或者点x；
 
  <a-modal
@@ -475,6 +476,7 @@ v-model双向绑定；value初始值。
            }
          }
        },
+```
 
 ### 4.8.3 口诀：
 
@@ -513,7 +515,7 @@ Script ——> export default  ——> methods ——> init()
 ## 4.12 <a-table>表格标签
 
 ### 4.12.1 <a-table>标签的常见属性
-
+```
   <a-table
   
       ref="table"
@@ -537,7 +539,7 @@ Script ——> export default  ——> methods ——> init()
    \>
    
    </a-table>
-   
+```   
  1）rowKey属性：行标志。每行的独有标志，一般运用randomUUID()定义，用于区分各行；
  
  2）:columns属性：表格中所存在的各列，在created中定义tabelOneColumns；
@@ -553,7 +555,7 @@ Script ——> export default  ——> methods ——> init()
    总数相关表达式：this.ipagination.total = res.result.total || 0;
    
    【注意：用current获取页码】
-   
+ ```  
  loadData(current){
  
       this.loading = true;
@@ -593,7 +595,7 @@ Script ——> export default  ——> methods ——> init()
       })
       
      },
-     
+```     
  5）:loading属性：【待明了】；
  
  6）:scroll属性：用于是否启用滑动条；
@@ -640,7 +642,7 @@ Script ——> export default  ——> methods ——> init()
 https://cloud.tencent.com/developer/section/1489869
 
 ### 4.16.1 单选框
-
+```
 <a-radio-group></a-radio-group>
 
  <a-radio-group v-model="result.second.cronEvery">
@@ -696,9 +698,11 @@ https://cloud.tencent.com/developer/section/1489869
        </a-row>
        
       </a-radio-group>
+```
 
 ### 4.16.2 多选框
 
+```
 <a-checkgroup></a-radio-group>
 
          <a-checkbox-group v-model="flowInfo.nextUserList">
@@ -710,6 +714,7 @@ https://cloud.tencent.com/developer/section/1489869
           </template>
           
          </a-checkbox-group>
+```
 
 # 5 Java学习
 
@@ -752,21 +757,21 @@ https://blog.csdn.net/m0_37761437/article/details/1104689441
 ## 5.4 不区分大小写进行数据库oracle查询
 
 ### 5.4.1 方法一：在mapper.xml中用REGEXP_LIKE方法
-
+```
   <select id="getByName" resultType="org.jeecg.modules.erp.entity.ErpHVendor">
    
      select * from ERP_H_VENDOR where REGEXP_LIKE(zname,#{name}, 'i')
      
    </select>
-
+```
 ### 5.4.2 方法二：queryWrapper中使用UPPER()和toUpperCase()
-
+```
 if(StringUtils.isNotBlank(para.getZmaktxEn())) {
 
       queryWrapper.like("UPPER(ZMAKTX_EN)", para.getZmaktxEn().toUpperCase());
       
  };
-
+```
 ## 5.5 entity间传值（从header到matnrPartsVo，对应关系：相同的property之间）
 
 BeanUtils.copyProperties(header, matnrPartsVo);
